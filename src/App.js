@@ -69,8 +69,8 @@ export default function App() {
 
   useEffect(() => {
     Promise.all([
-      fetch("http://127.0.0.1:8000/api/sector").then(r => r.json()),
-      fetch("http://127.0.0.1:8000/api/theme").then(r => r.json()),
+      fetch("https://rs-backend-p2gv.onrender.com/api/sector").then(r => r.json()),
+      fetch("https://rs-backend-p2gv.onrender.com/api/theme").then(r => r.json()),
     ]).then(([sector, theme]) => {
       setSectorData(sector);
       setThemeData(theme);
