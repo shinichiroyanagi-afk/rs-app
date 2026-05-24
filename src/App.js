@@ -59,8 +59,8 @@ const Table = ({ data, showName }) => (
   </table>
 );
 
-const th = { padding: "8px 12px", textAlign: "center", fontWeight: "bold", color: "#94a3b8" };
-const td = { padding: "6px 12px", textAlign: "center" };
+const th = { padding: "6px 6px", textAlign: "center", fontWeight: "bold", color: "#94a3b8", fontSize: "11px", whiteSpace: "nowrap" };
+const td = { padding: "4px 6px", textAlign: "center", fontSize: "12px", whiteSpace: "nowrap" };
 
 export default function App() {
   const [sectorData, setSectorData] = useState([]);
@@ -86,7 +86,7 @@ export default function App() {
 
   return (
     <div style={{ background: "#0a0a0a", minHeight: "100vh", padding: 24 }}>
-      <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto", overflowX: "auto" }}>
         <h1 style={{ fontSize: 28, marginBottom: 4, color: "#f1f5f9" }}>📊 ETF RSランク</h1>
         <p style={{ color: "#64748b", marginBottom: 24 }}>相対強度ランク（0〜100）上位ほど強い</p>
 
