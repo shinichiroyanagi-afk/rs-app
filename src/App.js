@@ -32,7 +32,7 @@ const Table = ({ data, showName }) => (
         <th style={th}>1W</th>
         <th style={th}>1M</th>
         <th style={th}>Ticker</th>
-        {showName && <th style={th}>Name</th>}
+        <th style={th}>Name</th>
         <th style={th}>Price</th>
         <th style={th}>RS Day%</th>
         <th style={th}>RS Wk%</th>
@@ -49,7 +49,7 @@ const Table = ({ data, showName }) => (
           <td style={td}><RankBadge value={row.w1} /></td>
           <td style={td}><RankBadge value={row.m1} /></td>
           <td style={{ ...td, fontWeight: "bold", color: "#60a5fa" }}>{row.ticker}</td>
-          {showName && <td style={{ ...td, color: "#94a3b8" }}>{row.name}</td>}
+          <td style={{ ...td, color: "#94a3b8" }}>{row.name || "-"}</td>
           <td style={{ ...td, color: "#e2e8f0" }}>{row.price?.toFixed(2)}</td>
           <td style={td}><PctCell value={row.rsDay} /></td>
           <td style={td}><PctCell value={row.rsWk} /></td>
